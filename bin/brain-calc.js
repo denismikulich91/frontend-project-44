@@ -1,7 +1,3 @@
-// TODO: Ask for intents (2 or 4?)
-// Why can't run from VSCode shell
-// Add a range for the random numbers
-
 import gameEngine from '../src/index.js';
 
 const rule = () => {

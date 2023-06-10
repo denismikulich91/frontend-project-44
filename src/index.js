@@ -17,6 +17,8 @@ export default (task, game) => {
     console.log('Find the greatest common divisor of given numbers.');
   } else if (game === 'progression') {
     console.log('What number is missing in the progression?');
+  } else {
+    console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
   }
   let correctAnswers = 0;
   while (correctAnswers < 3) {
