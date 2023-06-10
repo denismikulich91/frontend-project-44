@@ -1,6 +1,8 @@
-//TODO: Ask for intents (2 or 4?)
+// TODO: Ask for intents (2 or 4?)
 // Why can't run from VSCode shell
-import gameEngine from '../src/index.js'
+// Add a range for the random numbers
+
+import gameEngine from '../src/index.js';
 
 const rule = () => {
   const taskPack = [];
@@ -12,8 +14,7 @@ const rule = () => {
   taskPack.push(strTask);
   if (randomSign === '*') {
     taskPack.push(number1 * number2);
-  }
-  else if (randomSign === '+') {
+  } else if (randomSign === '+') {
     taskPack.push(number1 + number2);
   } else {
     taskPack.push(number1 - number2);
@@ -21,4 +22,4 @@ const rule = () => {
   return taskPack;
 };
 
-gameEngine(rule, 'calc')
+gameEngine(rule, 'calc');

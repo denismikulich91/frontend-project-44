@@ -1,13 +1,15 @@
 import readlineSync from 'readline-sync';
 
 export default (task, game) => {
-  console.log('Welcome to the Brain Games!')
+  console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?\n');
   console.log(`Hello, ${name}!`);
   if (game === 'even') {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
   } else if (game === 'calc') {
     console.log('What is the result of the expression?');
+  } else if (game === 'gcd') {
+    console.log('Find the greatest common divisor of given numbers.');
   }
   let correctAnswers = 0;
   while (correctAnswers < 3) {
@@ -26,5 +28,5 @@ export default (task, game) => {
     console.log(`Congratulations, ${name}!`);
   } else {
     console.log(`Let's try again, ${name}!`);
-  };
-}
+  }
+};

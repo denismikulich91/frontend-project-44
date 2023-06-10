@@ -9,4 +9,3 @@ const rule = () => {
 };
 
 gameEngine(rule, 'even');
-
