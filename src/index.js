@@ -1,3 +1,8 @@
+// TODO: Ask for intents (2 or 4?)
+// Why can't run from VSCode shell
+// Add a range for the random numbers
+// Repalce if else with switch?
+
 import readlineSync from 'readline-sync';
 
 export default (task, game) => {
@@ -10,6 +15,8 @@ export default (task, game) => {
     console.log('What is the result of the expression?');
   } else if (game === 'gcd') {
     console.log('Find the greatest common divisor of given numbers.');
+  } else if (game === 'progression') {
+    console.log('What number is missing in the progression?');
   }
   let correctAnswers = 0;
   while (correctAnswers < 3) {
