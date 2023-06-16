@@ -2,27 +2,18 @@
 // Why can't run from VSCode shell
 // Add a range for the random numbers
 // Repalce if else with switch?
+// vite and dependencies?
 
 import readlineSync from 'readline-sync';
 
-export default (task, game) => {
+export default (rule, task) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?\n');
   console.log(`Hello, ${name}!`);
-  if (game === 'even') {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  } else if (game === 'calc') {
-    console.log('What is the result of the expression?');
-  } else if (game === 'gcd') {
-    console.log('Find the greatest common divisor of given numbers.');
-  } else if (game === 'progression') {
-    console.log('What number is missing in the progression?');
-  } else {
-    console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
-  }
+  console.log(task);
   let correctAnswers = 0;
   while (correctAnswers < 3) {
-    const tasks = task();
+    const tasks = rule();
     const number = tasks[1];
     const answer = readlineSync.question(`Question: ${tasks[0]}\n`);
     if (number == answer) {
