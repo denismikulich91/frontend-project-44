@@ -3,6 +3,19 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/437832909e8167346cdb/maintainability)](https://codeclimate.com/github/denismikulich91/frontend-project-44/maintainability)
 
 brain-even:
+<h2>Игра: "Проверка на чётность"</h2>
+<div>
+Необходимо реализовать игру "Проверка на чётность". Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное:
+</div>
+
+```
+Welcome to the Brain Games!
+May I have your name? Bill
+Hello, Bill!
+Answer "yes" if the number is even, otherwise answer "no".
+Question: 15
+Your answer: yes
+```
 [![asciicast](https://asciinema.org/a/tMeqL1VVKCcNftUdgN1Xh9VQ0.svg)](https://asciinema.org/a/tMeqL1VVKCcNftUdgN1Xh9VQ0)
 
 brain-calc:
