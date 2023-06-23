@@ -1,4 +1,5 @@
 import gameEngine from '../src/index.js';
+
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 const rule = () => {
   const taskPack = [];
@@ -10,4 +11,3 @@ const rule = () => {
 export default () => {
   gameEngine(rule, task);
 };
-

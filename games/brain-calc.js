@@ -1,4 +1,5 @@
 import gameEngine from '../src/index.js';
+
 const task = 'What is the result of the expression?';
 const rule = () => {
   const taskPack = [];

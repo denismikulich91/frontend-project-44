@@ -14,9 +14,9 @@ export default (rule, task) => {
   let correctAnswers = 0;
   while (correctAnswers < 3) {
     const tasks = rule();
-    const number = tasks[1];
+    const number = String(tasks[1]);
     const answer = readlineSync.question(`Question: ${tasks[0]}\n`);
-    if (number == answer) {
+    if (number === answer) {
       console.log('Correct!');
       correctAnswers += 1;
     } else {

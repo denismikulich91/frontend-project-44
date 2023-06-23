@@ -2,11 +2,10 @@ import gameEngine from '../src/index.js';
 
 const gcd = (a, b) => {
   if (b === 0) {
-      return a;
-  } else {
-      return gcd(b, a % b);
+    return a;
   }
-}
+  return gcd(b, a % b);
+};
 
 const task = 'Find the greatest common divisor of given numbers.';
 const rule = () => {
