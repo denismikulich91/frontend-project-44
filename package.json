@@ -1,12 +1,12 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/denismikulich91/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/denismikulich91/frontend-project-44/actions)",
+  "description": "Console hosted game containing 5 different games based on number tasks",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Denis Mikulich",
   "license": "ISC",
   "type": "module",
   "bin": {

@@ -1,11 +1,13 @@
 import gameEngine from '../src/index.js';
+import getRandomInt from '../src/utils.js';
 
+const isEven = (number) => (number % 2 === 0);
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 const rule = () => {
   const taskPack = [];
-  const number = Math.floor(Math.random() * 100);
-  taskPack.push(number);
-  taskPack.push(number % 2 === 0 ? 'yes' : 'no');
+  const number = getRandomInt(0, 100);
+  taskPack.push(String(number));
+  taskPack.push(isEven(number) ? 'yes' : 'no');
   return taskPack;
 };
 export default () => {

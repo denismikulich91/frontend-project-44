@@ -1,9 +1,3 @@
-// TODO: Ask for intents (2 or 4?)
-// Why can't run from VSCode shell
-// Add a range for the random numbers
-// Repalce if else with switch?
-// vite and dependencies?
-
 import readlineSync from 'readline-sync';
 
 export default (rule, task) => {
@@ -12,10 +6,10 @@ export default (rule, task) => {
   console.log(`Hello, ${name}!`);
   console.log(task);
   let correctAnswers = 0;
-  while (correctAnswers < 3) {
-    const tasks = rule();
-    const number = String(tasks[1]);
-    const answer = readlineSync.question(`Question: ${tasks[0]}\n`);
+  for (let i = 0; i < 3; i += 1) {
+    const taskPack = rule();
+    const number = taskPack[1];
+    const answer = readlineSync.question(`Question: ${taskPack[0]}\n`);
     if (number === answer) {
       console.log('Correct!');
       correctAnswers += 1;

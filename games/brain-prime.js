@@ -1,4 +1,5 @@
 import gameEngine from '../src/index.js';
+import getRandomInt from '../src/utils.js';
 
 const isPrime = (num) => {
   if (num <= 1) {
@@ -12,15 +13,15 @@ const isPrime = (num) => {
   return true;
 };
 
-const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const primeTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const rule = () => {
   const taskPack = [];
-  const number = Math.floor(Math.random() * 100);
+  const number = String(getRandomInt(0, 100));
   taskPack.push(number);
   taskPack.push(isPrime(number) ? 'yes' : 'no');
   return taskPack;
 };
 
 export default () => {
-  gameEngine(rule, task);
+  gameEngine(rule, primeTask);
 };

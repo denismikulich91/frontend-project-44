@@ -1,4 +1,5 @@
 import gameEngine from '../src/index.js';
+import getRandomInt from '../src/utils.js';
 
 const gcd = (a, b) => {
   if (b === 0) {
@@ -7,16 +8,16 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const task = 'Find the greatest common divisor of given numbers.';
+const gcdTask = 'Find the greatest common divisor of given numbers.';
 const rule = () => {
   const taskPack = [];
-  const number1 = Math.floor(Math.random() * 100);
-  const number2 = Math.floor(Math.random() * 100);
-  taskPack.push(`${number1} ${number2}`);
-  taskPack.push(gcd(number1, number2));
+  const gcdNumber1 = getRandomInt(0, 100);
+  const gcdNumber2 = getRandomInt(0, 100);
+  taskPack.push(`${gcdNumber1} ${gcdNumber2}`);
+  taskPack.push(String(gcd(gcdNumber1, gcdNumber2)));
   return taskPack;
 };
 
 export default () => {
-  gameEngine(rule, task);
+  gameEngine(rule, gcdTask);
 };
