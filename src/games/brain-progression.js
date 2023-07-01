@@ -1,5 +1,5 @@
-import gameEngine from '../src/index.js';
-import getRandomInt from '../src/utils.js';
+import gameEngine from '../index.js';
+import getRandomInt from '../utils.js';
 
 const range = (startNumber) => {
   const result = [];
@@ -8,7 +8,6 @@ const range = (startNumber) => {
   }
   return result;
 };
-
 const progressionTask = 'What number is missing in the progression?';
 const rule = () => {
   const taskPack = [];
