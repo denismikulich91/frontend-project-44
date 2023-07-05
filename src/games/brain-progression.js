@@ -1,25 +1,21 @@
 import gameEngine from '../index.js';
 import getRandomInt from '../utils.js';
 
-const range = (startNumber) => {
-  const result = [];
-  for (let i = startNumber; i < startNumber + getRandomInt(10, 20); i += 2) {
-    result.push(i);
-  }
-  return result;
-};
-const progressionTask = 'What number is missing in the progression?';
-const rule = () => {
-  const taskPack = [];
+const getProgression = (progressionStep=2) => {
+  const progressionArray = [];
   const progressionStartNumber = getRandomInt(0, 100);
-  const progressionArray = range(progressionStartNumber);
+  for (let i = progressionStartNumber; i < progressionStartNumber + getRandomInt(10, 20); i += progressionStep) {
+    progressionArray.push(i);
+  }
   const randPick = getRandomInt(0, progressionArray.length - 1);
   const answer = progressionArray[randPick];
   progressionArray[randPick] = '..';
   const question = progressionArray.join(' ');
-  taskPack.push(question);
-  taskPack.push(String(answer));
-  return taskPack;
+  return [question, String(answer)];
+};
+const progressionTask = 'What number is missing in the progression?';
+const rule = () => {
+  return getProgression();
 };
 
 export default () => {
