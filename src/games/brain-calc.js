@@ -2,13 +2,15 @@ import gameEngine from '../index.js';
 import getRandomInt from '../utils.js';
 
 const getCalculatedAnswer = (sign, number1, number2) => {
-  switch(sign) {
+  switch (sign) {
     case '*':
       return (number1 * number2);
     case '+':
       return (number1 + number2);
-    default:
+    case '-':
       return (number1 - number2);
+    default:
+      return null;
   }
 };
 const task = 'What is the result of the expression?';
